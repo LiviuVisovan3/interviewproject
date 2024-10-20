@@ -7,6 +7,7 @@ import {
   faUserFriends,
 } from "@fortawesome/free-solid-svg-icons";
 import { Bar } from "react-chartjs-2";
+import Sidebar from "../Sidebar";
 
 export default function Teachers() {
   const [teachers, setTeachers] = useState([]);
@@ -29,24 +30,43 @@ export default function Teachers() {
 
   return (
     <div className="teachers">
-      {teachers.map((x) => (
-        <div className="teacher-box">
-          <img
-            src="https://randomuser.me/api/portraits/women/2.jpg"
-            alt="logo"
-          />
-          <div>
-            <span>{x.name}</span>
-            <p>{x.subject}</p>
-          </div>
-          <div className="grade">
-            <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
-              ★
-            </span>
-            {x.review}
-          </div>{" "}
-        </div>
-      ))}
+      <Sidebar />
+      <table>
+        <thead>
+          <th>Teacher Name</th>
+          <th>Subject</th>
+          <th>Number of Classes</th>
+          <th>Review Score</th>
+        </thead>
+        <tbody>
+          {teachers.map((x) => (
+            <tr>
+              <td>
+                <img
+                  src="https://randomuser.me/api/portraits/women/2.jpg"
+                  alt="logo"
+                />
+
+                <div className="name-id">
+                  <span>{x.name}</span>
+                  <span className="id">ID: {x.id}</span>
+                </div>
+              </td>
+              <td>
+                <p>{x.subject}</p>
+              </td>
+              <td>{x.classes}</td>
+              <td>
+                <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
+                  ★
+                </span>
+                {x.review}
+              </td>
+              <td></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -1,4 +1,24 @@
+## Project Screenshots
+
+### Login Screen
+
+<img src="./login.png" alt="Check Email" width="350px">
+
+### Forgot Password Screen
+
+<img src="./forgotpassword.png" alt="Check Email" width="350px">
+
+### Check Email Screen
+
 <img src="./checkemail.png" alt="Check Email" width="350px">
+
+### Set New Password Screen
+
+<img src="./setnewpassword.png" alt="Check Email" width="350px">
+
+### Dashboard Screen
+
+<img src="./dashboard.png" alt="Check Email" width="350px">
 
 ## Running the project
 

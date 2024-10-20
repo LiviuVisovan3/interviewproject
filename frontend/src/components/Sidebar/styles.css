@@ -46,6 +46,7 @@
   }
   .option-wrapper {
     display: flex;
+    align-items: center;
     gap: 8px;
     svg {
       color: rgb(125, 125, 125);

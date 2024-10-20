@@ -1,0 +1,99 @@
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  margin-top: 40px;
+  text-align: center;
+
+  .back-arrow {
+    align-self: flex-start;
+    margin-bottom: 16px;
+    svg {
+      width: 24px;
+      height: 40px;
+      color: rgb(142, 140, 140);
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      color: rgb(134, 74, 230);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0px;
+    }
+  }
+
+  h2 {
+    margin: 0px;
+  }
+
+  p {
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: rgb(142, 140, 140);
+  }
+
+  input {
+    margin-bottom: 40px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid rgb(178, 178, 179);
+    box-shadow: none;
+
+    &::placeholder {
+      color: rgb(207, 208, 211);
+    }
+  }
+
+  label {
+    align-self: flex-start;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: rgb(142, 140, 140);
+  }
+
+  .extra-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+
+    .checkbox-wrapper {
+      display: flex;
+      justify-content: center;
+
+      input[type="checkbox"] {
+        border: 1px solid rgb(213, 213, 213);
+        margin: 0;
+      }
+      label {
+        color: black;
+        margin: 0px;
+        margin-left: 4px;
+      }
+    }
+
+    .forgot-password {
+      color: rgb(134, 74, 230);
+    }
+  }
+
+  .sign-in {
+    width: calc(100%-12px);
+    background-color: rgb(126, 62, 229);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+  }
+}

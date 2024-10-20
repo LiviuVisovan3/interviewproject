@@ -1,6 +1,9 @@
 import "./styles.css";
+import { useNavigate } from "react-router-dom";
 
 export default function LogInScreen() {
+  const navigate = useNavigate();
+
   return (
     <div className="login-screen">
       <div className="title">
@@ -19,9 +22,16 @@ export default function LogInScreen() {
           <label for="remember">Remember me</label>
         </div>
 
-        <div className="forgot-password">Forgot password?</div>
+        <div
+          className="forgot-password"
+          onClick={() => navigate("/forgot-password")}
+        >
+          Forgot password?
+        </div>
       </div>
-      <div className="sign-in">Sign in</div>
+      <div className="sign-in" onClick={() => navigate("/homescreen")}>
+        Sign in
+      </div>
     </div>
   );
 }

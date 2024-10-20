@@ -1,0 +1,84 @@
+.sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 16px;
+  padding: 16px;
+  border-right: 1px solid rgb(231, 231, 234);
+  height: 100vh;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0px;
+    }
+  }
+
+  input {
+    margin-bottom: 16px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: none;
+
+    &::placeholder {
+      color: rgb(150, 150, 150);
+    }
+  }
+
+  .menu-option {
+    color: rgb(125, 125, 125);
+    width: 150px;
+    text-align: start;
+    cursor: pointer;
+  }
+  .option-wrapper {
+    display: flex;
+    gap: 8px;
+    svg {
+      color: rgb(125, 125, 125);
+    }
+  }
+
+  .account-box {
+    display: flex;
+    bottom: 52px;
+    align-items: center;
+    position: absolute;
+    border-top: 1px solid rgb(231, 231, 234);
+    padding-top: 16px;
+    gap: 6px;
+
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50px;
+    }
+
+    span {
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 10px;
+      margin: 0;
+    }
+
+    svg {
+      margin-left: 10px;
+      color: rgb(125, 125, 125);
+    }
+  }
+}

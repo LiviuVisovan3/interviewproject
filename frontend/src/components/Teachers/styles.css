@@ -7,9 +7,28 @@
   width: auto;
   background-color: rgb(252, 252, 252);
 
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  h3 {
+    font-size: 14px;
+    color: grey;
+    margin-top: 0;
+  }
+
   table {
     width: 100%;
     font-size: 14px;
+    padding: 40px;
+    border: 1px solid rgb(231, 231, 234);
+    border-radius: 8px;
 
     th {
       text-align: left;
@@ -18,8 +37,10 @@
     }
 
     tr {
-      border-bottom: 1px solid rgb(231, 231, 234);
-      padding: 4px;
+      td {
+        border-bottom: 1px solid rgb(231, 231, 234);
+        padding: 16px 0;
+      }
 
       img {
         width: 35px;

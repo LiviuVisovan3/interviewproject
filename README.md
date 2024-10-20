@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+<img src="./checkemail.png" alt="Check Email" width="350px">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Running the project
 
 In the frontend project directory, you can run:
 

@@ -29,7 +29,7 @@ export default function LogInScreen() {
           Forgot password?
         </div>
       </div>
-      <div className="sign-in" onClick={() => navigate("/homescreen")}>
+      <div className="sign-in" onClick={() => navigate("/home")}>
         Sign in
       </div>
     </div>

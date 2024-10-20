@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express'
 // eslint-disable-next-line import/no-unresolved
 import { Express } from 'express-serve-static-core'
-import * as teachers from '@/controllers/entries'
+import * as teachers from './controllers/teachers'
 import * as Sentry from '@sentry/node'
 
 const apiRouter = express.Router()

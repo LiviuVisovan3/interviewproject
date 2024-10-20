@@ -16,6 +16,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import Sidebar from "../Sidebar";
 
 ChartJS.register(
   CategoryScale,
@@ -194,194 +195,206 @@ const totals = [
 
 export default function Dashboard() {
   return (
-    <div className="dashboard">
-      <h1>Dashboard</h1>
-      <div className="totals-wrapper">
-        {totals.map((x, index) => {
-          const [key, value] = Object.entries(x)[0];
-          const [icon, value2] = Object.entries(x)[1];
-          console.log(icon);
-          return (
-            <div className="total-box" key={index}>
-              <div className="svg-wrapper">
-                <FontAwesomeIcon icon={value2} />
+    <div style={{ display: "flex" }}>
+      <Sidebar />
+      <div className="dashboard">
+        <h1>Dashboard</h1>
+        <div className="totals-wrapper">
+          {totals.map((x, index) => {
+            const [key, value] = Object.entries(x)[0];
+            const [icon, value2] = Object.entries(x)[1];
+            console.log(icon);
+            return (
+              <div className="total-box" key={index}>
+                <div className="svg-wrapper">
+                  <FontAwesomeIcon icon={value2} />
+                </div>
+                <div>
+                  <p>{key}</p>
+                  <span>{value}</span>
+                </div>
               </div>
-              <div>
-                <p>{key}</p>
-                <span>{value}</span>
-              </div>
+            );
+          })}
+        </div>
+        <div className="attendance">
+          <Bar data={data} options={options} />
+        </div>
+        <div className="topteachers">
+          <h2>Top Rated Teachers</h2>
+          <div className="teacher-box">
+            <img
+              src="https://randomuser.me/api/portraits/women/3.jpg"
+              alt="logo"
+            />
+            <div>
+              <span>Theresa Webb</span>
+              <p>Subject: Mathematics</p>
             </div>
-          );
-        })}
-      </div>
-      <div className="attendance">
-        <Bar data={data} options={options} />
-      </div>
-      <div className="topteachers">
-        <h2>Top Rated Teachers</h2>
-        <div className="teacher-box">
-          <img
-            src="https://randomuser.me/api/portraits/women/3.jpg"
-            alt="logo"
-          />
-          <div>
-            <span>Theresa Webb</span>
-            <p>Subject: Mathematics</p>
+            <div className="grade">
+              <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
+                ★
+              </span>
+              4.8
+            </div>
           </div>
-          <div className="grade">
-            <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
-              ★
-            </span>
-            4.8
+          <div className="teacher-box">
+            <img
+              src="https://randomuser.me/api/portraits/men/3.jpg"
+              alt="logo"
+            />
+            <div>
+              <span>Ronald Richards</span>
+              <p>Subject: English</p>
+            </div>
+            <div className="grade">
+              <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
+                ★
+              </span>
+              4.8
+            </div>
           </div>
-        </div>
-        <div className="teacher-box">
-          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="logo" />
-          <div>
-            <span>Ronald Richards</span>
-            <p>Subject: English</p>
+          <div className="teacher-box">
+            <img
+              src="https://randomuser.me/api/portraits/men/2.jpg"
+              alt="logo"
+            />
+            <div>
+              <span>Ralph Edwards</span>
+              <p>Subject: Arabic</p>
+            </div>
+            <div className="grade">
+              <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
+                ★
+              </span>
+              4.8
+            </div>
           </div>
-          <div className="grade">
-            <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
-              ★
-            </span>
-            4.8
+          <div className="teacher-box">
+            <img
+              src="https://randomuser.me/api/portraits/men/1.jpg"
+              alt="logo"
+            />
+            <div>
+              <span>Annette Black</span>
+              <p>Subject: History</p>
+            </div>
+            <div className="grade">
+              <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
+                ★
+              </span>
+              4.8
+            </div>
           </div>
-        </div>
-        <div className="teacher-box">
-          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="logo" />
-          <div>
-            <span>Ralph Edwards</span>
-            <p>Subject: Arabic</p>
+          <div className="teacher-box">
+            <img
+              src="https://randomuser.me/api/portraits/women/2.jpg"
+              alt="logo"
+            />
+            <div>
+              <span>Tiffany Alenxander</span>
+              <p>Subject: Geography</p>
+            </div>
+            <div className="grade">
+              <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
+                ★
+              </span>
+              4.8
+            </div>{" "}
           </div>
-          <div className="grade">
-            <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
-              ★
-            </span>
-            4.8
-          </div>
-        </div>
-        <div className="teacher-box">
-          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="logo" />
-          <div>
-            <span>Annette Black</span>
-            <p>Subject: History</p>
-          </div>
-          <div className="grade">
-            <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
-              ★
-            </span>
-            4.8
-          </div>
-        </div>
-        <div className="teacher-box">
-          <img
-            src="https://randomuser.me/api/portraits/women/2.jpg"
-            alt="logo"
-          />
-          <div>
-            <span>Tiffany Alenxander</span>
-            <p>Subject: Geography</p>
-          </div>
-          <div className="grade">
-            <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
-              ★
-            </span>
-            4.8
-          </div>{" "}
-        </div>
 
-        <div className="teacher-box">
-          <img
-            src="https://randomuser.me/api/portraits/women/1.jpg"
-            alt="logo"
-          />
-          <div>
-            <span>Laslie Alenxander</span>
-            <p>Subject: English</p>
-          </div>
-          <div className="grade">
-            <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
-              ★
-            </span>
-            4.8
+          <div className="teacher-box">
+            <img
+              src="https://randomuser.me/api/portraits/women/1.jpg"
+              alt="logo"
+            />
+            <div>
+              <span>Laslie Alenxander</span>
+              <p>Subject: English</p>
+            </div>
+            <div className="grade">
+              <span style={{ fontSize: "24px", color: "rgb(255,187,11)" }}>
+                ★
+              </span>
+              4.8
+            </div>
           </div>
         </div>
-      </div>
-      <div style={{ display: "flex", gap: "40px" }}>
-        <div className="topfive">
-          <h2>Top 5 Students</h2>
-          <table>
-            <thead>
-              <th>Student</th>
-              <th>Grade</th>
-              <th>Reward (%)</th>
-              <th>Absences</th>
-            </thead>
-            <tbody>
-              <td>
-                <img
-                  src="https://randomuser.me/api/portraits/women/7.jpg"
-                  alt="logo"
-                />
-                Kathryn Murphy
-              </td>
-              <td>9.8</td>
-              <td>95%</td>
-              <td>12</td>
-            </tbody>
-            <tbody>
-              <td>
-                <img
-                  src="https://randomuser.me/api/portraits/men/6.jpg"
-                  alt="logo"
-                />
-                Darell Steward
-              </td>
-              <td>9.6</td>
-              <td>92%</td>
-              <td>16</td>
-            </tbody>
-            <tbody>
-              <td>
-                <img
-                  src="https://randomuser.me/api/portraits/women/6.jpg"
-                  alt="logo"
-                />
-                Arlene McCoy
-              </td>
-              <td>9.2</td>
-              <td>89%</td>
-              <td>20</td>
-            </tbody>
-            <tbody>
-              <td>
-                <img
-                  src="https://randomuser.me/api/portraits/women/5.jpg"
-                  alt="logo"
-                />
-                Eleanor Pena
-              </td>
-              <td>8.9</td>
-              <td>85%</td>
-              <td>28</td>
-            </tbody>
-            <tbody>
-              <td>
-                <img
-                  src="https://randomuser.me/api/portraits/men/5.jpg"
-                  alt="logo"
-                />
-                Guy Hawkins
-              </td>
-              <td>8.7</td>
-              <td>82%</td>
-              <td>32</td>
-            </tbody>
-          </table>
-        </div>
-        <div className="topclass">
-          <Bar data={data3} options={options2} />
+        <div style={{ display: "flex", gap: "40px" }}>
+          <div className="topfive">
+            <h2>Top 5 Students</h2>
+            <table>
+              <thead>
+                <th>Student</th>
+                <th>Grade</th>
+                <th>Reward (%)</th>
+                <th>Absences</th>
+              </thead>
+              <tbody>
+                <td>
+                  <img
+                    src="https://randomuser.me/api/portraits/women/7.jpg"
+                    alt="logo"
+                  />
+                  Kathryn Murphy
+                </td>
+                <td>9.8</td>
+                <td>95%</td>
+                <td>12</td>
+              </tbody>
+              <tbody>
+                <td>
+                  <img
+                    src="https://randomuser.me/api/portraits/men/6.jpg"
+                    alt="logo"
+                  />
+                  Darell Steward
+                </td>
+                <td>9.6</td>
+                <td>92%</td>
+                <td>16</td>
+              </tbody>
+              <tbody>
+                <td>
+                  <img
+                    src="https://randomuser.me/api/portraits/women/6.jpg"
+                    alt="logo"
+                  />
+                  Arlene McCoy
+                </td>
+                <td>9.2</td>
+                <td>89%</td>
+                <td>20</td>
+              </tbody>
+              <tbody>
+                <td>
+                  <img
+                    src="https://randomuser.me/api/portraits/women/5.jpg"
+                    alt="logo"
+                  />
+                  Eleanor Pena
+                </td>
+                <td>8.9</td>
+                <td>85%</td>
+                <td>28</td>
+              </tbody>
+              <tbody>
+                <td>
+                  <img
+                    src="https://randomuser.me/api/portraits/men/5.jpg"
+                    alt="logo"
+                  />
+                  Guy Hawkins
+                </td>
+                <td>8.7</td>
+                <td>82%</td>
+                <td>32</td>
+              </tbody>
+            </table>
+          </div>
+          <div className="topclass">
+            <Bar data={data3} options={options2} />
+          </div>
         </div>
       </div>
     </div>

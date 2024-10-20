@@ -2,23 +2,23 @@
 
 ### Login Screen
 
-<img src="./login.png" alt="Check Email" width="300px">
+<img src="./login.png" alt="Check Email" width="250px">
 
 ### Forgot Password Screen
 
-<img src="./forgotpassword.png" alt="Check Email" width="300px">
+<img src="./forgotpassword.png" alt="Check Email" width="250px">
 
 ### Check Email Screen
 
-<img src="./checkemail.png" alt="Check Email" width="300px">
+<img src="./checkemail.png" alt="Check Email" width="250px">
 
 ### Set New Password Screen
 
-<img src="./setnewpassword.png" alt="Check Email" width="300px">
+<img src="./setnewpassword.png" alt="Check Email" width="250px">
 
 ### Dashboard Screen
 
-<img src="./dashboard.png" alt="Check Email" width="600px">
+<img src="./dashboard.png" alt="Check Email" width="800px">
 
 ## Running the project
 

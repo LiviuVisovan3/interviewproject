@@ -1,0 +1,17 @@
+{
+  "name": "calorie-shared",
+  "version": "1.0.0",
+  "description": "This repository contains the shared (common) code between calorie-client and calorie-server such as types, utility functions and constants.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "refresh": "cd calorie-client && npm run refresh-shared && cd .. && cd calorie-server && npm run refresh-shared",
+    "db": "mongod --dbpath=/Users/ipersonal/data/db",
+    "c": "cd calorie-client && npm start",
+    "s": "cd calorie-server && nodemon",
+    "populate-local-db": "cd calorie-server && mongorestore",
+    "quality": "cd calorie-server && npm run quality"
+  },
+  "author": "Iuliu Vișovan",
+  "license": "ISC"
+}

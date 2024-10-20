@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "extends": [
+    "node",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": ["static", "views", "build", "node_modules"],
+  "globals": {
+    "by": "readonly",
+    "device": "readonly",
+    "element": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "_" }],
+    "curly": "error",
+    "comma-dangle": ["error", "only-multiline"],
+    "dot-notation": "off",
+    "import/no-named-as-default-member": "off",
+    "import/prefer-default-export": "off",
+    "no-empty": "off",
+    "import/no-named-as-default": "off",
+    "object-shorthand": "off",
+    "no-else-return": "off",
+    "import/no-namespace": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
+}
